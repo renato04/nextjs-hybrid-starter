@@ -1,13 +1,12 @@
-import { redirect } from "next/navigation";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest, res: NextResponse) {
-    console.log(req);
-  
+    console.log(req.nextUrl.origin)
+    console.log(await req.json());
     // Handle actual request
-    const { where } = await req.json();
-    console.log(where)
-    return redirect("/page-a");
-
+    return Response.redirect(`${req.nextUrl.origin}/page-a`,  302);  
 }
   
+
+
+    

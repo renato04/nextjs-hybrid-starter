@@ -1,4 +1,6 @@
 import React from 'react';
+import { redirect } from 'next/navigation';
+
 
 const PageA: React.FC = () => {
   return (
@@ -10,5 +12,7 @@ const PageA: React.FC = () => {
     </div>
   );
 };
+
+
 
 export default PageA;
