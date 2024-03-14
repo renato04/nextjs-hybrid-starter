@@ -7,7 +7,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     // Handle actual request
     const { where } = await req.json();
     console.log(where)
-    redirect('/');
+    return redirect("/page-a");
 
 }
   
